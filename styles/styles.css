@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('../assets/fonts/PPKyoto-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('../assets/fonts/PPKyoto-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pencerio';
+  src: url('../assets/fonts/Pencerio-Hairline.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PP Kyoto', serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #4a7bc8 0%, #5b8dd6 50%, #4a7bc8 100%);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: auto;
+  padding: 2rem 0;
+}
+
+.header img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin: auto 0;
+  padding: 4rem 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover {
+  transform: rotate(-3deg);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 2rem 0;
+}
+
+.footer img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    gap: 4rem;
+  }
+  
+  .nav-item {
+    font-size: 2.5rem;
+  }
+  
+  .header img {
+    max-width: 500px;
+  }
+  
+  .footer img {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 0;
+  }
+  
+  .nav-item {
+    font-size: 2rem;
+  }
+  
+  .header img {
+    max-width: 400px;
+  }
+  
+  .footer img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .navigation {
+    gap: 2rem;
+  }
+  
+  .nav-item {
+    font-size: 1.5rem;
+  }
+  
+  .header img {
+    max-width: 300px;
+  }
+  
+  .footer img {
+    max-width: 350px;
+  }
+}
