@@ -84,6 +84,14 @@ body {
   padding: 2rem 0;
 }
 
+.footer.left-align {
+  text-align: left;
+}
+
+.footer.left-align .nav-item {
+  font-size: 1.25rem;
+}
+
 .footer img {
   width: 100%;
   max-width: 900px;
@@ -153,4 +161,13 @@ body {
   .footer img {
     max-width: 500px;
   }
+}
+
+.container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.container.fade-in {
+  opacity: 1;
 }
