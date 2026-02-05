@@ -4,15 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotografias - Inês & Gio</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/photos/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg">
   <link rel="stylesheet" href="../styles/styles.css">
   <script src="../js/loader.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <img src="../assets/photos/fotografias.svg" alt="Fotografias" />
+      <img src="../assets/logos/fotografias.svg" alt="Fotografias" />
     </header>
+
+    <main class="gallery" aria-label="Galería de fotografias">
+      <!--hero-->
+      <div class="hero">
+        <a href="../assets/fotos_casamento/1.jpg" target="_blank" rel="noopener">
+          <img src="../assets/fotos_casamento/1.jpg" alt="Foto 1" />
+        </a>
+      </div>
+
+      <!--segunda fila-->
+      <div class="three-up">
+        <a href="../assets/fotos_casamento/2.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/2.jpg" alt="Foto 2"></a>
+        <a href="../assets/fotos_casamento/3.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/3.jpg" alt="Foto 3"></a>
+        <a href="../assets/fotos_casamento/4.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/4.jpg" alt="Foto 4"></a>
+      </div>
+
+      <!--terceira fila coluna esquerda fotos 5 e 6 e dps por baixo 8-11, foto 7 ocupa espaço todo-->
+      <div class="layout-two-col">
+        <div class="left-col">
+          <div class="left-top">
+            <a href="../assets/fotos_casamento/5.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/5.jpg" alt="Foto 5"></a>
+            <a href="../assets/fotos_casamento/6.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/6.jpg" alt="Foto 6"></a>
+          </div>
+
+          <div class="left-bottom thumb-grid">
+            <a href="../assets/fotos_casamento/8.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/8.jpg" alt="Foto 8"></a>
+            <a href="../assets/fotos_casamento/9.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/9.jpg" alt="Foto 9"></a>
+            <a href="../assets/fotos_casamento/10.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/10.jpg" alt="Foto 10"></a>
+            <a href="../assets/fotos_casamento/11.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/11.jpg" alt="Foto 11"></a>
+          </div>
+        </div>
+
+        <div class="right-col">
+          <a href="../assets/fotos_casamento/7.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/7.jpg" alt="Foto 7"></a>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/gallery.js"></script>
 
     <footer class="footer left-align">
       <a href="../index.html" class="nav-item">← voltar</a>
