@@ -1,8 +1,8 @@
 //measure images and set CSS grid row spans to preserve full image height
 document.addEventListener('DOMContentLoaded', () => {
-  const containers = document.querySelectorAll('.three-up, .thumb-grid, .left-top');
-  const rowHeightPx = 8; //must match CSS grid-auto-rows value
-  const rowGap = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--gallery-gap') || 8, 10) || 8;
+  const containers = document.querySelectorAll('.three-up, .photo-grid');
+  const rowHeightPx = 10; //must match CSS grid-auto-rows value
+  const rowGap = 12; // 0.75rem = 12px
 
   function resizeItem(item) {
     const img = item.querySelector('img');
@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
   //initial run in case images already loaded
   setTimeout(resizeAll, 50);
 });
+

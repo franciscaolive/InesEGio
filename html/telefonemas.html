@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script>
+    // Set base path dynamically for localhost vs GitHub Pages
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/InesEGio/' : '/';
+    document.write('<base href="' + basePath + '">');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chamadas Perdidas - Inês & Gio</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg">
-  <link rel="stylesheet" href="../styles/styles.css">
-  <script src="../js/loader.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/loader.js"></script>
 </head>
 <body>
+  <nav class="top-nav">
+    <a href="index.html" class="back-button">← voltar</a>
+  </nav>
+  
   <div class="container">
     <header class="header">
-      <img src="../assets/logos/telefonemas.svg" alt="Fotografias" />
+      <img src="assets/logos/telefonemas.svg" alt="Fotografias" />
     </header>
-
-    <footer class="footer left-align">
-      <a href="../index.html" class="nav-item">← voltar</a>
-    </footer>
   </div>
 </body>
 </html>

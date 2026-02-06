@@ -1,61 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script>
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/InesEGio/' : '/';
+    document.write('<base href="' + basePath + '">');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotografias - Inês & Gio</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg">
-  <link rel="stylesheet" href="../styles/styles.css">
-  <script src="../js/loader.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/loader.js"></script>
 </head>
 <body>
+  <nav class="top-nav">
+    <a href="index.html" class="back-button">← voltar</a>
+  </nav>
+  
   <div class="container">
     <header class="header">
-      <img src="../assets/logos/fotografias.svg" alt="Fotografias" />
+      <img src="assets/logos/fotografias.svg" alt="Fotografias" />
     </header>
 
     <main class="gallery" aria-label="Galería de fotografias">
       <!--hero-->
       <div class="hero">
-        <a href="../assets/fotos_casamento/1.jpg" target="_blank" rel="noopener">
-          <img src="../assets/fotos_casamento/1.jpg" alt="Foto 1" />
+        <a href="assets/fotos_casamento/1.jpg" target="_blank" rel="noopener">
+          <img src="assets/fotos_casamento/1.jpg" alt="Foto 1" />
         </a>
       </div>
 
       <!--segunda fila-->
       <div class="three-up">
-        <a href="../assets/fotos_casamento/2.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/2.jpg" alt="Foto 2"></a>
-        <a href="../assets/fotos_casamento/3.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/3.jpg" alt="Foto 3"></a>
-        <a href="../assets/fotos_casamento/4.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/4.jpg" alt="Foto 4"></a>
+        <a href="assets/fotos_casamento/2.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/2.jpg" alt="Foto 2"></a>
+        <a href="assets/fotos_casamento/3.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/3.jpg" alt="Foto 3"></a>
+        <a href="assets/fotos_casamento/4.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/4.jpg" alt="Foto 4"></a>
       </div>
 
-      <!--terceira fila coluna esquerda fotos 5 e 6 e dps por baixo 8-11, foto 7 ocupa espaço todo-->
+      <!--terceira fila-->
       <div class="layout-two-col">
         <div class="left-col">
           <div class="left-top">
-            <a href="../assets/fotos_casamento/5.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/5.jpg" alt="Foto 5"></a>
-            <a href="../assets/fotos_casamento/6.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/6.jpg" alt="Foto 6"></a>
+            <a href="assets/fotos_casamento/5.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/5.jpg" alt="Foto 5"></a>
+            <a href="assets/fotos_casamento/6.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/6.jpg" alt="Foto 6"></a>
           </div>
 
           <div class="left-bottom thumb-grid">
-            <a href="../assets/fotos_casamento/8.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/8.jpg" alt="Foto 8"></a>
-            <a href="../assets/fotos_casamento/9.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/9.jpg" alt="Foto 9"></a>
-            <a href="../assets/fotos_casamento/10.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/10.jpg" alt="Foto 10"></a>
-            <a href="../assets/fotos_casamento/11.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/11.jpg" alt="Foto 11"></a>
+            <a href="assets/fotos_casamento/8.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/8.jpg" alt="Foto 8"></a>
+            <a href="assets/fotos_casamento/9.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/9.jpg" alt="Foto 9"></a>
+            <a href="assets/fotos_casamento/10.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/10.jpg" alt="Foto 10"></a>
+            <a href="assets/fotos_casamento/11.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/11.jpg" alt="Foto 11"></a>
           </div>
         </div>
 
         <div class="right-col">
-          <a href="../assets/fotos_casamento/7.jpg" target="_blank" rel="noopener"><img src="../assets/fotos_casamento/7.jpg" alt="Foto 7"></a>
+          <a href="assets/fotos_casamento/7.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/7.jpg" alt="Foto 7"></a>
         </div>
+      </div>
+
+      <!--fotos a serem organizadas-->
+      <div class="photo-grid">
+        <a href="assets/fotos_casamento/12.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/12.jpg" alt="Foto 12"></a>
+        <a href="assets/fotos_casamento/13.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/13.jpg" alt="Foto 13"></a>
+        <a href="assets/fotos_casamento/14.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/14.jpg" alt="Foto 14"></a>
+        <a href="assets/fotos_casamento/15.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/15.jpg" alt="Foto 15"></a>
+        <a href="assets/fotos_casamento/16.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/16.jpg" alt="Foto 16"></a>
+        <a href="assets/fotos_casamento/17.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/17.jpg" alt="Foto 17"></a>
+        <a href="assets/fotos_casamento/18.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/18.jpg" alt="Foto 18"></a>
+        <a href="assets/fotos_casamento/19.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/19.jpg" alt="Foto 19"></a>
+        <a href="assets/fotos_casamento/20.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/20.jpg" alt="Foto 20"></a>
+        <a href="assets/fotos_casamento/21.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/21.jpg" alt="Foto 21"></a>
+        <a href="assets/fotos_casamento/22.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/22.jpg" alt="Foto 22"></a>
+        <a href="assets/fotos_casamento/23.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/23.jpg" alt="Foto 23"></a>
+        <a href="assets/fotos_casamento/24.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/24.jpg" alt="Foto 24"></a>
+        <a href="assets/fotos_casamento/25.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/25.jpg" alt="Foto 25"></a>
+        <a href="assets/fotos_casamento/26.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/26.jpg" alt="Foto 26"></a>
+        <a href="assets/fotos_casamento/27.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/27.jpg" alt="Foto 27"></a>
+        <a href="assets/fotos_casamento/28.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/28.jpg" alt="Foto 28"></a>
+        <a href="assets/fotos_casamento/29.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/29.jpg" alt="Foto 29"></a>
+        <a href="assets/fotos_casamento/30.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/30.jpg" alt="Foto 30"></a>
+        <a href="assets/fotos_casamento/31.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/31.jpg" alt="Foto 31"></a>
+        <a href="assets/fotos_casamento/32.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/32.jpg" alt="Foto 32"></a>
+        <a href="assets/fotos_casamento/33.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/33.jpg" alt="Foto 33"></a>
+        <a href="assets/fotos_casamento/34.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/34.jpg" alt="Foto 34"></a>
+        <a href="assets/fotos_casamento/35.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/35.jpg" alt="Foto 35"></a>
+        <a href="assets/fotos_casamento/36.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/36.jpg" alt="Foto 36"></a>
+        <a href="assets/fotos_casamento/37.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/37.jpg" alt="Foto 37"></a>
+        <a href="assets/fotos_casamento/38.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/38.jpg" alt="Foto 38"></a>
+        <a href="assets/fotos_casamento/39.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/39.jpg" alt="Foto 39"></a>
+        <a href="assets/fotos_casamento/40.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/40.jpg" alt="Foto 40"></a>
+        <a href="assets/fotos_casamento/41.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/41.jpg" alt="Foto 41"></a>
+        <a href="assets/fotos_casamento/42.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/42.jpg" alt="Foto 42"></a>
+        <a href="assets/fotos_casamento/43.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/43.jpg" alt="Foto 43"></a>
+        <a href="assets/fotos_casamento/44.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/44.jpg" alt="Foto 44"></a>
+        <a href="assets/fotos_casamento/45.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/45.jpg" alt="Foto 45"></a>
+        <a href="assets/fotos_casamento/46.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/46.jpg" alt="Foto 46"></a>
+        <a href="assets/fotos_casamento/47.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/47.jpg" alt="Foto 47"></a>
+        <a href="assets/fotos_casamento/48.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/48.jpg" alt="Foto 48"></a>
+        <a href="assets/fotos_casamento/49.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/49.jpg" alt="Foto 49"></a>
+        <a href="assets/fotos_casamento/50.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/50.jpg" alt="Foto 50"></a>
+        <a href="assets/fotos_casamento/51.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/51.jpg" alt="Foto 51"></a>
+        <a href="assets/fotos_casamento/52.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/52.jpg" alt="Foto 52"></a>
+        <a href="assets/fotos_casamento/53.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/53.jpg" alt="Foto 53"></a>
+        <a href="assets/fotos_casamento/54.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/54.jpg" alt="Foto 54"></a>
+        <a href="assets/fotos_casamento/55.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/55.jpg" alt="Foto 55"></a>
+        <a href="assets/fotos_casamento/56.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/56.jpg" alt="Foto 56"></a>
+        <a href="assets/fotos_casamento/57.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/57.jpg" alt="Foto 57"></a>
+        <a href="assets/fotos_casamento/58.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/58.jpg" alt="Foto 58"></a>
+        <a href="assets/fotos_casamento/59.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/59.jpg" alt="Foto 59"></a>
+        <a href="assets/fotos_casamento/60.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/60.jpg" alt="Foto 60"></a>
+        <a href="assets/fotos_casamento/61.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/61.jpg" alt="Foto 61"></a>
+        <a href="assets/fotos_casamento/62.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/62.jpg" alt="Foto 62"></a>
+        <a href="assets/fotos_casamento/63.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/63.jpg" alt="Foto 63"></a>
+        <a href="assets/fotos_casamento/64.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/64.jpg" alt="Foto 64"></a>
+        <a href="assets/fotos_casamento/65.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/65.jpg" alt="Foto 65"></a>
+        <a href="assets/fotos_casamento/66.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/66.jpg" alt="Foto 66"></a>
+        <a href="assets/fotos_casamento/67.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/67.jpg" alt="Foto 67"></a>
+        <a href="assets/fotos_casamento/68.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/68.jpg" alt="Foto 68"></a>
+        <a href="assets/fotos_casamento/69.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/69.jpg" alt="Foto 69"></a>
+        <a href="assets/fotos_casamento/70.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/70.jpg" alt="Foto 70"></a>
+        <a href="assets/fotos_casamento/71.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/71.jpg" alt="Foto 71"></a>
+        <a href="assets/fotos_casamento/72.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/72.jpg" alt="Foto 72"></a>
+        <a href="assets/fotos_casamento/73.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/73.jpg" alt="Foto 73"></a>
+        <a href="assets/fotos_casamento/74.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/74.jpg" alt="Foto 74"></a>
+        <a href="assets/fotos_casamento/75.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/75.jpg" alt="Foto 75"></a>
+        <a href="assets/fotos_casamento/76.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/76.jpg" alt="Foto 76"></a>
+        <a href="assets/fotos_casamento/77.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/77.jpg" alt="Foto 77"></a>
+        <a href="assets/fotos_casamento/78.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/78.jpg" alt="Foto 78"></a>
+        <a href="assets/fotos_casamento/79.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/79.jpg" alt="Foto 79"></a>
+        <a href="assets/fotos_casamento/80.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/80.jpg" alt="Foto 80"></a>
+        <a href="assets/fotos_casamento/82.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/82.jpg" alt="Foto 82"></a>
+        <a href="assets/fotos_casamento/83.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/83.jpg" alt="Foto 83"></a>
+        <a href="assets/fotos_casamento/84.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/84.jpg" alt="Foto 84"></a>
+        <a href="assets/fotos_casamento/85.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/85.jpg" alt="Foto 85"></a>
+        <a href="assets/fotos_casamento/86.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/86.jpg" alt="Foto 86"></a>
+        <a href="assets/fotos_casamento/87.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/87.jpg" alt="Foto 87"></a>
+        <a href="assets/fotos_casamento/88.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/88.jpg" alt="Foto 88"></a>
+        <a href="assets/fotos_casamento/89.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/89.jpg" alt="Foto 89"></a>
+        <a href="assets/fotos_casamento/90.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/90.jpg" alt="Foto 90"></a>
+        <a href="assets/fotos_casamento/91.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/91.jpg" alt="Foto 91"></a>
+        <a href="assets/fotos_casamento/92.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/92.jpg" alt="Foto 92"></a>
+        <a href="assets/fotos_casamento/93.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/93.jpg" alt="Foto 93"></a>
+        <a href="assets/fotos_casamento/94.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/94.jpg" alt="Foto 94"></a>
+        <a href="assets/fotos_casamento/95.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/95.jpg" alt="Foto 95"></a>
+        <a href="assets/fotos_casamento/96.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/96.jpg" alt="Foto 96"></a>
+        <a href="assets/fotos_casamento/97.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/97.jpg" alt="Foto 97"></a>
+        <a href="assets/fotos_casamento/98.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/98.jpg" alt="Foto 98"></a>
+        <a href="assets/fotos_casamento/99.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/99.jpg" alt="Foto 99"></a>
+        <a href="assets/fotos_casamento/100.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/100.jpg" alt="Foto 100"></a>
+        <a href="assets/fotos_casamento/101.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/101.jpg" alt="Foto 101"></a>
+        <a href="assets/fotos_casamento/102.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/102.jpg" alt="Foto 102"></a>
+        <a href="assets/fotos_casamento/103.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/103.jpg" alt="Foto 103"></a>
+        <a href="assets/fotos_casamento/104.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/104.jpg" alt="Foto 104"></a>
+        <a href="assets/fotos_casamento/105.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/105.jpg" alt="Foto 105"></a>
+        <a href="assets/fotos_casamento/106.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/106.jpg" alt="Foto 106"></a>
+        <a href="assets/fotos_casamento/107.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/107.jpg" alt="Foto 107"></a>
+        <a href="assets/fotos_casamento/108.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/108.jpg" alt="Foto 108"></a>
+        <a href="assets/fotos_casamento/109.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/109.jpg" alt="Foto 109"></a>
+        <a href="assets/fotos_casamento/110.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/110.jpg" alt="Foto 110"></a>
+        <a href="assets/fotos_casamento/111.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/111.jpg" alt="Foto 111"></a>
+        <a href="assets/fotos_casamento/112.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/112.jpg" alt="Foto 112"></a>
+        <a href="assets/fotos_casamento/113.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/113.jpg" alt="Foto 113"></a>
+        <a href="assets/fotos_casamento/114.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/114.jpg" alt="Foto 114"></a>
+        <a href="assets/fotos_casamento/115.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/115.jpg" alt="Foto 115"></a>
+        <a href="assets/fotos_casamento/116.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/116.jpg" alt="Foto 116"></a>
+        <a href="assets/fotos_casamento/117.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/117.jpg" alt="Foto 117"></a>
+        <a href="assets/fotos_casamento/118.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/118.jpg" alt="Foto 118"></a>
+        <a href="assets/fotos_casamento/119.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/119.jpg" alt="Foto 119"></a>
+        <a href="assets/fotos_casamento/120.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/120.jpg" alt="Foto 120"></a>
+        <a href="assets/fotos_casamento/121.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/121.jpg" alt="Foto 121"></a>
+        <a href="assets/fotos_casamento/122.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/122.jpg" alt="Foto 122"></a>
+        <a href="assets/fotos_casamento/123.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/123.jpg" alt="Foto 123"></a>
+        <a href="assets/fotos_casamento/124.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/124.jpg" alt="Foto 124"></a>
+        <a href="assets/fotos_casamento/125.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/125.jpg" alt="Foto 125"></a>
+        <a href="assets/fotos_casamento/126.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/126.jpg" alt="Foto 126"></a>
+        <a href="assets/fotos_casamento/127.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/127.jpg" alt="Foto 127"></a>
+        <a href="assets/fotos_casamento/128.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/128.jpg" alt="Foto 128"></a>
+        <a href="assets/fotos_casamento/129.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/129.jpg" alt="Foto 129"></a>
+        <a href="assets/fotos_casamento/130.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/130.jpg" alt="Foto 130"></a>
+        <a href="assets/fotos_casamento/131.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/131.jpg" alt="Foto 131"></a>
+        <a href="assets/fotos_casamento/132.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/132.jpg" alt="Foto 132"></a>
+        <a href="assets/fotos_casamento/133.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/133.jpg" alt="Foto 133"></a>
+        <a href="assets/fotos_casamento/134.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/134.jpg" alt="Foto 134"></a>
+        <a href="assets/fotos_casamento/135.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/135.jpg" alt="Foto 135"></a>
+        <a href="assets/fotos_casamento/136.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/136.jpg" alt="Foto 136"></a>
+        <a href="assets/fotos_casamento/137.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/137.jpg" alt="Foto 137"></a>
+        <a href="assets/fotos_casamento/138.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/138.jpg" alt="Foto 138"></a>
+        <a href="assets/fotos_casamento/139.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/139.jpg" alt="Foto 139"></a>
+        <a href="assets/fotos_casamento/140.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/140.jpg" alt="Foto 140"></a>
+        <a href="assets/fotos_casamento/141.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/141.jpg" alt="Foto 141"></a>
+        <a href="assets/fotos_casamento/142.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/142.jpg" alt="Foto 142"></a>
+        <a href="assets/fotos_casamento/143.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/143.jpg" alt="Foto 143"></a>
+        <a href="assets/fotos_casamento/144.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/144.jpg" alt="Foto 144"></a>
+        <a href="assets/fotos_casamento/145.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/145.jpg" alt="Foto 145"></a>
+        <a href="assets/fotos_casamento/146.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/146.jpg" alt="Foto 146"></a>
+        <a href="assets/fotos_casamento/147.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/147.jpg" alt="Foto 147"></a>
+        <a href="assets/fotos_casamento/148.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/148.jpg" alt="Foto 148"></a>
+        <a href="assets/fotos_casamento/149.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/149.jpg" alt="Foto 149"></a>
+        <a href="assets/fotos_casamento/150.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/150.jpg" alt="Foto 150"></a>
+        <a href="assets/fotos_casamento/151.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/151.jpg" alt="Foto 151"></a>
+        <a href="assets/fotos_casamento/152.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/152.jpg" alt="Foto 152"></a>
+        <a href="assets/fotos_casamento/153.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/153.jpg" alt="Foto 153"></a>
+        <a href="assets/fotos_casamento/154.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/154.jpg" alt="Foto 154"></a>
+        <a href="assets/fotos_casamento/155.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/155.jpg" alt="Foto 155"></a>
+        <a href="assets/fotos_casamento/156.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/156.jpg" alt="Foto 156"></a>
+        <a href="assets/fotos_casamento/157.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/157.jpg" alt="Foto 157"></a>
+        <a href="assets/fotos_casamento/158.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/158.jpg" alt="Foto 158"></a>
+        <a href="assets/fotos_casamento/159.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/159.jpg" alt="Foto 159"></a>
+        <a href="assets/fotos_casamento/160.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/160.jpg" alt="Foto 160"></a>
+        <a href="assets/fotos_casamento/161.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/161.jpg" alt="Foto 161"></a>
+        <a href="assets/fotos_casamento/162.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/162.jpg" alt="Foto 162"></a>
+        <a href="assets/fotos_casamento/163.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/163.jpg" alt="Foto 163"></a>
+        <a href="assets/fotos_casamento/164.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/164.jpg" alt="Foto 164"></a>
+        <a href="assets/fotos_casamento/165.jpg" target="_blank" rel="noopener"><img src="assets/fotos_casamento/165.jpg" alt="Foto 165"></a>
       </div>
     </main>
 
-    <script src="../js/gallery.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/lightbox.js"></script>
+  </div>
 
-    <footer class="footer left-align">
-      <a href="../index.html" class="nav-item">← voltar</a>
-    </footer>
+  <!--lightbox-->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Fechar">&times;</button>
+    <button class="lightbox-prev" aria-label="Anterior">&lt;</button>
+    <button class="lightbox-next" aria-label="Próxima">&gt;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
   </div>
 </body>
 </html>
