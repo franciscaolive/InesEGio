@@ -5,7 +5,7 @@ const videoIds = {
   '3': '8V8H89t7ztU', //receção
   '4': 'dQw4w9WgXcQ', //cerimonia
   '5': 'dQw4w9WgXcQ', //cocktail
-  '6': 'dQw4w9WgXcQ'  //jantar
+  '6': 'Rx0RO51JFzs'  //jantar
 };
 
 const YT_THUMBNAIL = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
