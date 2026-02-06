@@ -3,12 +3,36 @@ const videoIds = {
   '1': 'LYphRh0h454',//preparativos
   '2': 'yC2wen7VArg',//primeiro encontro
   '3': '8V8H89t7ztU',//receção
-  '4': 'dQw4w9WgXcQ',//cerimonia
-  '5': 'dQw4w9WgXcQ',//cocktail
+  '4': 'pPGQzlhU4WI',//cerimonia
+  '5': 'bZvWqncZ-cs',//cocktail
   '6': 'Rx0RO51JFzs'//jantar
 };
 
-const YT_THUMBNAIL = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+const YT_THUMBNAIL_SOURCES = ['maxresdefault', 'sddefault', 'hqdefault'];
+
+const loadBestThumbnail = (placeholder, videoId) => {
+  let resolved = false;
+
+  const tryQuality = (index) => {
+    if (resolved || index >= YT_THUMBNAIL_SOURCES.length) return;
+    const quality = YT_THUMBNAIL_SOURCES[index];
+    const url = `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
+    const testImage = new Image();
+
+    testImage.onload = () => {
+      resolved = true;
+      placeholder.style.backgroundImage = `url(${url})`;
+    };
+
+    testImage.onerror = () => {
+      tryQuality(index + 1);
+    };
+
+    testImage.src = url;
+  };
+
+  tryQuality(0);
+};
 
 function loadVideo(videoNum) {
   const videoId = videoIds[videoNum];
@@ -44,7 +68,7 @@ document.querySelectorAll('.video-wrapper').forEach(wrapper => {
   const videoId = videoIds[videoNum];
 
   if (placeholder && videoId) {
-    placeholder.style.backgroundImage = `url(${YT_THUMBNAIL(videoId)})`;
+    loadBestThumbnail(placeholder, videoId);
     placeholder.addEventListener('click', () => loadVideo(videoNum));
   }
 });
