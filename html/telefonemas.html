@@ -8,20 +8,80 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telefonemas - Inês & Gio</title>
+  <title>Chamadas Perdidas - Inês & Gio</title>
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="js/loader.js"></script>
 </head>
-<body>
+<body class="telefonemas-page">
   <nav class="top-nav">
     <a href="index.html" class="back-button">← voltar</a>
   </nav>
   
   <div class="container">
     <header class="header">
-      <img src="assets/logos/telefonemas.svg" alt="Fotografias" />
+      <img src="assets/logos/telefonemas.svg" alt="Telefonemas" />
     </header>
+    
+    <main class="videos-container call-list">
+      <div class="video-section call-section" data-call="ines">
+        <div class="call-row" data-call="ines" data-audio="assets/audio/ines.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem de Inês">Inês</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="gio">
+        <div class="call-row" data-call="gio" data-audio="assets/audio/gio.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem de Gio">Gio</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="mae-ines">
+        <div class="call-row" data-call="mae-ines" data-audio="assets/audio/mae-ines.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem da mãe da Inês">Mãe - Inês</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="pai-gio">
+        <div class="call-row" data-call="pai-gio" data-audio="assets/audio/pai-gio.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem do pai do Gio">Pai - Gio</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="mae-gio">
+        <div class="call-row" data-call="mae-gio" data-audio="assets/audio/mae-gio.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem da mãe do Gio">Mãe - Gio</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="rita">
+        <div class="call-row" data-call="rita" data-audio="assets/audio/rita.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem da Rita">Rita</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="diego">
+        <div class="call-row" data-call="diego" data-audio="assets/audio/diego.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem do Diego">Diego</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+
+      <div class="video-section call-section" data-call="nina">
+        <div class="call-row" data-call="nina" data-audio="assets/audio/nina.mp3">
+          <button class="call-name video-title" type="button" aria-label="Ouvir mensagem da Nina">Nina</button>
+          <button class="video-play-btn call-play-btn" type="button">ouvir</button>
+        </div>
+      </div>
+    </main>
   </div>
+  
+  <script src="js/telefonemas.js"></script>
 </body>
 </html>
