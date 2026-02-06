@@ -219,6 +219,27 @@ body {
   opacity: 1;
 }
 
+body.memorias-page {
+  padding: 0;
+}
+
+body.memorias-page .container {
+  padding: 5rem 0 0;
+  min-height: auto;
+  display: block;
+  width: 100%;
+}
+
+body.memorias-page .header {
+  margin-bottom: clamp(2rem, 6vw, 4.5rem);
+  padding: 2rem clamp(1.5rem, 6vw, 5rem) 0;
+}
+
+body.memorias-page .header img {
+  max-width: min(900px, 90vw);
+  margin: 0 auto;
+}
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -510,5 +531,138 @@ body {
   
   .lightbox-next {
     right: 0.5rem;
+  }
+}
+
+/*video*/
+.videos-container {
+  width: 100%;
+  margin: clamp(2.5rem, 6vw, 4.5rem) 0 0;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0 clamp(1.25rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+  overflow: visible;
+}
+
+.video-section:first-child {
+  border-top: none;
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.video-title {
+  font-family: 'PP Kyoto', serif;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
+  color: white;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.video-play-btn {
+  font-family: 'PP Kyoto', serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  letter-spacing: 0.04em;
+  color: white;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.video-play-btn:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transform: translateX(6px);
+}
+
+.video-play-btn.played {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+
+.video-play-btn.played:hover {
+  transform: none;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-wrapper.loaded {
+  cursor: default;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding: 0 1.5rem 2.5rem;
+  }
+  
+  .video-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+  }
+  
+  .video-play-btn {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 0 1rem 2rem;
+  }
+  
+  .video-title {
+    font-size: 1.35rem;
   }
 }
