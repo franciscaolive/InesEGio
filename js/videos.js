@@ -1,11 +1,11 @@
 //ytb video ids for each section
 const videoIds = {
-  '1': 'LYphRh0h454', //preparativos
-  '2': 'yC2wen7VArg', //primeiro encontro
-  '3': '8V8H89t7ztU', //receção
-  '4': 'dQw4w9WgXcQ', //cerimonia
-  '5': 'dQw4w9WgXcQ', //cocktail
-  '6': 'Rx0RO51JFzs'  //jantar
+  '1': 'LYphRh0h454',//preparativos
+  '2': 'yC2wen7VArg',//primeiro encontro
+  '3': '8V8H89t7ztU',//receção
+  '4': 'dQw4w9WgXcQ',//cerimonia
+  '5': 'dQw4w9WgXcQ',//cocktail
+  '6': 'Rx0RO51JFzs'//jantar
 };
 
 const YT_THUMBNAIL = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
