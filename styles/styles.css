@@ -685,11 +685,25 @@ body.telefonemas-page .header img {
 
 .call-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(1rem, 3vw, 2.5rem);
   width: 100%;
   min-height: clamp(3.5rem, 5vw, 4.5rem);
+}
+
+.call-progress {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.call-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  transition: width 0.15s linear;
 }
 
 .call-name,

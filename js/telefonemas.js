@@ -6,20 +6,24 @@ if (callRows.length) {
 
   let activeSection = null;
   let activeSrc = '';
+  let activeProgress = null;
 
-  const clearActive = () => {
-    if (activeSection) {
-      activeSection.classList.remove('playing');
-      activeSection = null;
+  const resetProgress = (section) => {
+    if (!section) return;
+    const bar = section.querySelector('.call-progress-bar');
+    if (bar) {
+      bar.style.width = '0%';
     }
   };
 
-  const setActiveSection = (section) => {
-    clearActive();
-    if (section) {
-      section.classList.add('playing');
-      activeSection = section;
-    }
+  const attachSection = (section) => {
+    activeSection = section || null;
+    activeProgress = section ? section.querySelector('.call-progress-bar') : null;
+  };
+
+  const setPlayingState = (section, isPlaying) => {
+    if (!section) return;
+    section.classList.toggle('playing', Boolean(isPlaying));
   };
 
   const playCall = (row) => {
@@ -32,37 +36,54 @@ if (callRows.length) {
     }
 
     const isSameTrack = activeSrc === audioSrc;
-    const isPlaying = !audioPlayer.paused;
 
-    if (isSameTrack && isPlaying) {
-      audioPlayer.pause();
-      clearActive();
+    if (isSameTrack) {
+      attachSection(section);
+      if (!audioPlayer.paused) {
+        audioPlayer.pause();
+        setPlayingState(section, false);
+      } else {
+        setPlayingState(section, true);
+        audioPlayer.play().catch((err) => {
+          console.error('Unable to resume audio', err);
+          setPlayingState(section, false);
+        });
+      }
       return;
     }
 
-    if (isSameTrack && !isPlaying) {
-      setActiveSection(section);
-      audioPlayer.play().catch((err) => {
-        console.error('Unable to resume audio', err);
-        clearActive();
-      });
-      return;
+    if (activeSection && activeSection !== section) {
+      setPlayingState(activeSection, false);
+      resetProgress(activeSection);
     }
 
     audioPlayer.pause();
     audioPlayer.src = audioSrc;
     activeSrc = audioSrc;
+    attachSection(section);
+    resetProgress(section);
+    setPlayingState(section, true);
     audioPlayer.currentTime = 0;
-    setActiveSection(section);
+
     audioPlayer.play().catch((err) => {
       console.error('Unable to play audio', err);
-      clearActive();
+      setPlayingState(section, false);
+      resetProgress(section);
+      attachSection(null);
       activeSrc = '';
     });
   };
 
+  audioPlayer.addEventListener('timeupdate', () => {
+    if (!activeProgress || !audioPlayer.duration) return;
+    const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    activeProgress.style.width = `${Math.min(percentage, 100)}%`;
+  });
+
   audioPlayer.addEventListener('ended', () => {
-    clearActive();
+    resetProgress(activeSection);
+    setPlayingState(activeSection, false);
+    attachSection(null);
     activeSrc = '';
   });
 
