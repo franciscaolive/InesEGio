@@ -544,7 +544,7 @@ body.memorias-page .header img {
 }
 
 .video-section {
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
   padding: 0 clamp(1.25rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
   overflow: visible;
 }
